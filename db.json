@@ -1,0 +1,25 @@
+{
+    "tasks": [
+        {
+            "completed": true,
+            "description": "Visor de archivos", 
+            "id": 1,
+            "name": "Explorador de Windowss",
+            "level": "NORMAL"
+        },
+        {
+            "completed": false,
+            "description": "Poniendo en cuarentena a las amenazas",
+            "id": 2,
+            "name": "Antimalaware execution",
+            "level": "BLOCKING"
+        },
+        {
+            "completed": false,
+            "description": "Codeando como un pro",
+            "id":3,
+            "name": "Visual Studio Code",
+            "level": "NORMAL"
+        }
+    ]
+}
