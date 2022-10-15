@@ -1,6 +1,6 @@
 interface ModalTaskProps {
     handleClose?: Function
-    task:TaskModel
+    task: TaskModel
     show: boolean
 }
 
@@ -12,6 +12,16 @@ interface TaskModel {
     level: 'NORMAL' | 'URGENT' | 'BLOCKING'
 }
 
+interface UserModel {
+    email: string
+    password:string
+    role: 'USER' | 'ADMIN' 
+    userName: string
+}
+
+interface LoaderProps {
+    text: string
+}
 
 
-export { ModalTaskProps, TaskModel }
+export { LoaderProps, ModalTaskProps, UserModel, TaskModel }

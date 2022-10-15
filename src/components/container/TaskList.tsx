@@ -54,23 +54,31 @@ function TaskList({ tasks, setTasks }: Props) {
                         </button>
                     </div>
                     <div className="card-body" data-mdb-perfect-scrollbar="true" style={{ position: "relative", height: "500px" }}>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th scope="col">Title</th>
-                                    <th scope="col">Description</th>
-                                    <th scope="col">Priority</th>
-                                    <th scope="col">Actions</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {
-                                    tasks.map(task => {
-                                        return (<Task key={task.id} {...task} handleDelete={handleDelete} handleEdit={handleEdit} handleToggleCompleted={handleToggleCompleted} />)
-                                    })
-                                }
-                            </tbody>
-                        </table>
+                        {
+                            tasks.length ?
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Title</th>
+                                            <th scope="col">Description</th>
+                                            <th scope="col">Priority</th>
+                                            <th scope="col">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {
+                                            tasks.map(task => {
+                                                return (<Task key={task.id} {...task} handleDelete={handleDelete} handleEdit={handleEdit} handleToggleCompleted={handleToggleCompleted} />)
+                                            })
+                                        }
+                                    </tbody>
+                                </table>
+                                :
+                                <div>
+                                    <h3>There are no tasks to show</h3>
+                                </div>
+                        }
+
                     </div>
                 </div>
             </div>

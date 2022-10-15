@@ -1,38 +1,32 @@
 import React, { useState } from 'react'
-
-interface Props {
-    email: string
-    name: string
-    password: string
-    user: string
-}
+import { UserModel } from '../../../types/types'
 
 
-function Register({ email, name, password, user }: Props) {
+function Register({ email, password, role, userName }: UserModel) {
 
-    const [registerData, setCredentials] = useState<Props>({ email, name, password, user })
+    const [registerData, setRegisterData] = useState<UserModel>({ email, password, role, userName })
 
     function handleChange(event: React.ChangeEvent<HTMLInputElement>): void {
         const { name, value } = event.target
-        setCredentials({ ...registerData, [name]: value })
+        setRegisterData({ ...registerData, [name]: value })
     }
 
     return (
-        <div>
-            <label>Name:
-                <input name='name' onChange={handleChange} type='text' value={registerData.name} />
+        <form className="d-flex flex-column">
+            <label className='form-label'>Username:
+                <input name='name' className='form-control' onChange={handleChange} type='text' value={registerData.userName} />
             </label>
-            <label>Email:
-                <input name='email' onChange={handleChange} type='text' value={registerData.email} />
+            <label className='form-label'>Email:
+                <input name='email' className='form-control' onChange={handleChange} type='text' value={registerData.email} />
             </label>
-            <label>User:
-                <input name='user' onChange={handleChange} type='text' value={registerData.user} />
-            </label>
-            <label>
+            {/* <label className='form-label'>Role:
+                <input name='user' className='form-control' onChange={handleChange} type='text' value={registerData.role} />
+            </label> */}
+            <label className='form-label'>
                 Password:
-                <input name='user' onChange={handleChange} type='password' value={registerData.password} />
+                <input name='user' className='form-control' onChange={handleChange} type='password' value={registerData.password} />
             </label>
-        </div>
+        </form>
     )
 }
 

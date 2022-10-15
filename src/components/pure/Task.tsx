@@ -34,8 +34,11 @@ function renderLevelBadge(level: string): ReactNode {
 }
 
 function Task({ completed, description, handleDelete, handleEdit, handleToggleCompleted, id, name, level }: Props) {
+
+    const taskCompletedStyle = completed ? { textDecoration: 'line-through' } : {}
+
     return (
-        <tr className='fw-normal'>
+        <tr className='fw-normal' style={taskCompletedStyle}>
             <td>
                 <span>{name}</span>
             </td>
