@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
-import { TaskList } from './components/container/TaskList';
-import { Loader } from "./components/pure/Loader"
-import { Register } from "./components/pure/forms/Register"
-import { TaskModel } from './types/types'
-import { UserModel } from './types/types'
+import { TaskList } from '../components/container/TaskList';
+import { Loader } from '../components/pure/Loader'
+import { Register } from '../components/pure/forms/Register'
+import { TaskModel } from '../types/types'
+import { UserModel } from '../types/types'
 
 const INITIAL_TASKS: Array<TaskModel> = [
   { completed: true, description: 'Description1', id: 1, name: 'Hola 1', level: 'NORMAL' },

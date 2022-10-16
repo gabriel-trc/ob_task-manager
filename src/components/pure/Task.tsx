@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import { TaskModel } from '../../types/types'
-import '../../styles/task.scss'
+//import '../../styles/task.scss'
 
 interface Props extends TaskModel {
     handleDelete: Function

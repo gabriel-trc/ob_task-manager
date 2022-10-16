@@ -1,6 +1,5 @@
 
 import { LoaderProps } from '../../types/types'
-import '../../styles/task.scss'
 
 
 function Loader({ text }: LoaderProps) {
