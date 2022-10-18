@@ -29,6 +29,7 @@ function App() {
 
   return (
     <div className='container'>
+      <a href="/api/auth/login">Login</a>
       {loading ?
         <Loader text='Cargando tareas...' /> :
         <TaskList tasks={tasks} setTasks={setTasks} />
