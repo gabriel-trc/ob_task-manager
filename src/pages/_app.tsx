@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import { UserProvider } from '@auth0/nextjs-auth0';
 
-export default function MyApp({ Component, pageProps }: AppProps) {
+export default function TaskManager({ Component, pageProps }: AppProps) {
   return (
     <UserProvider>
       <Component {...pageProps} />

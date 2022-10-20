@@ -7,5 +7,6 @@ export default function Profile() {
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>{error.message}</div>;
   if (!user) return <Link href="/api/auth/login"><a>Login</a></Link>;
+  console.log(user.sid)
   return <div>Hello {user.name}, <Link href="/api/auth/logout"><a>Logout</a></Link></div>;
 }
